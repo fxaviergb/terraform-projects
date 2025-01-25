@@ -1,0 +1,22 @@
+{
+  "variables": {
+    "aws_region": "us-east-1",
+    "ami_name": "mean-app-ami"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "{{user `aws_region`}}",
+      "source_ami": "ami-04b4f1a9cf54c11d0",
+      "instance_type": "t2.micro",
+      "ssh_username": "ubuntu",
+      "ami_name": "{{user `ami_name`}}-{{timestamp}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "scripts/install_mean.sh"
+    }
+  ]
+}
