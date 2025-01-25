@@ -1,2 +1,2 @@
-mean_app_ami = "ami-007b524f6ea04230b"
-mongodb_ami = "ami-00e014efeb3d40158"
+mean_app_ami = "ami-0a15a82ef73baf17f"
+mongodb_ami = "ami-0c3d5ed4b696b936d"

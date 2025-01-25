@@ -11,7 +11,6 @@ output "lb_dns" {
 }
 
 output "nat_gateway_public_ip" {
-  description = "IP pública del NAT Gateway"
-  value       = module.network.nat_gateway_eip_public_ip
+  value = module.network.nat_gateway_eip_public_ip
 }
 

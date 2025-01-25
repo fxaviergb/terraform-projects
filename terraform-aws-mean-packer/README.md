@@ -102,7 +102,15 @@ terraform destroy -auto-approve
 
 Run the provided PowerShell script for fully automated deployment:
 ```powershell
-.\deploy-mean-stack.ps1
+.\deploy-mean-stack.ps1 -ExecutionType "all"
+```
+Run the provided PowerShell script for AMIs creation with Packer:
+```powershell
+.\deploy-mean-stack.ps1 -ExecutionType "packer"
+```
+Run the provided PowerShell script for IaC deploy with Terraform:
+```powershell
+.\deploy-mean-stack.ps1 -ExecutionType "terraform"
 ```
 Ensure the script has execution permissions:
 ```powershell
